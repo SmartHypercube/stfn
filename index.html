@@ -88,7 +88,7 @@
         </style>
         <script>
             function onload() {
-                keywords = decodeURI(location.pathname.slice(2));
+                keywords = decodeURI(location.hash.slice(1));
                 document.getElementById('baidu_search').value = keywords;
                 document.getElementById('bing_search').value = keywords;
             }
