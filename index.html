@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>你TMD不会自己上网搜索吗？</title>
+        <style>
+            div {
+                text-align: center;
+                }
+            #baidu_box {
+                height: 200px;
+                }
+            #baidu_logo {
+                height: 129px;
+                width: 270px;
+                }
+            #baidu_search_box {
+                border: 1px solid #b6b6b6;
+                display: inline-block;
+                vertical-align: top;
+                height: 34px;
+                width: 539px;
+                text-align: left;
+                overflow: hidden;
+                }
+            #baidu_search {
+                height: 22px;
+                width: 500px;
+                font-size: 16px;
+                line-height: 18px;
+                margin: 6px 0 0 7px;
+                border: 0;
+                }
+            #baidu_search_button {
+                height: 36px;
+                width: 100px;
+                color: #fff;
+                font-size: 15px;
+                background: #3385ff;
+                border-bottom: 1px solid #2d78f4;
+                outline: medium;
+                -webkit-border-radius: 0;
+                cursor: pointer;
+                border: 0;
+                text-align: center;
+                letter-spacing: 1px;
+                }
+            #bing_box {
+                background-color: #333;
+                text-align: center;
+                height: 200px;
+                }
+            #bing_logo {
+                margin: 60px 18px 0 0;
+                position: relative;
+                top: 15px;
+                }
+            #bing_form {
+                display: inline-block;
+                }
+            #bing_search_box {
+                background-color: #fff;
+                border: 1px solid #e5e5e5;
+                font-size: 18px;
+                height: 43px;
+                }
+            #bing_search {
+                margin: 6px 1px 0 9px;
+                height: 40px;
+                width: 487px;
+                border: 0;
+                padding-right: 4px;
+                max-height: 30px;
+                font-size: 100%;
+                }
+            #bing_search_button {
+                height: 45px;
+                width: 45px;
+                border: 8px solid #0c8484;
+                background-color: #0c8484;
+                background-image: url("http://www.bing.com/s/a/hpc20.png");
+                background-position: -169px -63px;
+                overflow: hidden;
+                vertical-align: top;
+                margin: -1px;
+                cursor: pointer;
+                }
+        </style>
+        <script>
+            function onload() {
+                keywords = decodeURI(location.pathname.slice(2));
+                document.getElementById('baidu_search').value = keywords;
+                document.getElementById('bing_search').value = keywords;
+            }
+        </script>
+    </head>
+    <body onload="onload()">
+        <div id="baidu_box">
+            <div>
+                <img id="baidu_logo" src="http://www.baidu.com/img/bd_logo1.png" />
+            </div>
+            <form id="baidu_form" action="https://www.baidu.com/s" method="get">
+                <span id="baidu_search_box"><input id="baidu_search" name="wd"/></span><span><input id="baidu_search_button" type="submit" value="百度一下" /></span>
+            </form>
+        </div>
+        <div id="text_box">
+            <img src="/img.jpg" />
+            <h1>你特么不会自己搜索一下吗？</h1>
+        </div>
+        <div id="bing_box">
+            <img id="bing_logo" src="http://www.bing.com/s/a/hp_zh_cn.png" /><form id="bing_form" action="https://www.bing.com/search" method="get"><div id="bing_search_box"><input id="bing_search" name="q" /><input id="bing_search_button" type="submit" value="" /></div></form>
+        </div>
+        <div id="bottom">
+            <p>如果你被别人要求看这个网页并感到受到了冒犯，放心，他们的意思仅仅是想让你<b>特么的自己搜索一下</b>。<br />
+                另外，你或许应该认真读一读<a href="https://lug.ustc.edu.cn/wiki/doc/smart-questions#rtfmstfw">《提问的智慧》</a>。</p>
+            <p>用法：遇到伸手党时，打开浏览器输入网址“searchthefucking.net/#关键字”，按回车，将浏览器转换后的网址发给对方。</p>
+            <p>开发&维护：<a href="http://0x01.me/">机智的超立方体</a>；欢迎<a href="mailto:smart.hypercube@gmail.com">提出改进意见</a>。</p>
+        </div>
+    </body>
+</html>
